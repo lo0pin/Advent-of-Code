@@ -12,7 +12,7 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 
 ---
 
-## 🎁 Progress Overview
+## 🎁 Progress Overview (2025)
 
 | Day | Part 1 | Part 2 |
 |-----|--------|--------|
@@ -41,6 +41,7 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 | 023 | [ ] | [ ] |
 | 024 | [ ] | [ ] |
 | 025 | [ ] | — |
+
 
 
 (*Day 25 traditionally has only one puzzle.*)
