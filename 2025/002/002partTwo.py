@@ -15,7 +15,7 @@ for i in ranges:
     start = int(current_list[0])
     end = int(current_list[1])
 
-    maximum_len =0
+    #maximum_len =0
     """
     if len(str(start))%2==1 and len(str(end))%2==1: #sequences mit ausschließlich zahlen mit ungeraden längen filtern
             continue
@@ -23,20 +23,23 @@ for i in ranges:
     for j in range(start, end+1): #alle Zahlen iterieren
         """
         if len(str(j)) %2==1: #ungerade Längen überspringen
-            continue        
+            continue
         """
 
-        current_word = str(j)
+        current_word = str(j).strip()
+        """
         if len(current_word)>maximum_len:
-            maximum_len = len(current_word)
+            maximum_len = len(current_word)        
+        """
         current_len = int(len(current_word))
 
         #11, 222, 3333 etc
-        similar_letter_counter = 0
-        for k in range(len(current_word)):
+        similar_letter_counter = 1
+        for k in range(1,len(current_word)):
+
             if current_word[k] == current_word[0]:
-                similar_letter_counter +=1
-        if similar_letter_counter == len(current_word):
+                    similar_letter_counter +=1
+        if similar_letter_counter == len(current_word) and len(current_word)>1:
             #print(current_word)
             solution += j
             continue
@@ -45,24 +48,42 @@ for i in ranges:
         #if len(current_word)%2 ==1:
             #continue
         
-        if len(current_word)%2==0:
-
-            two_letter_counter = 0
-            for l in range (0, len(current_word), 2):
-                if current_word[0:1] == current_word[l:(l+1)]:
-                    two_letter_counter += 1
-            #if two_letter_counter == len(current_word)/2:
+        if len(current_word)%3==0 and len(current_word)>3:
+            three_letter_counter = 1
+            for m in range(3, len(current_word), 3):
+                if current_word[0:3] == current_word[m:(m+3)]:
+                    three_letter_counter += 1
+            if three_letter_counter >= len(current_word)/3:
+                solution += j
                 #print (j)
+                continue                
+        
+        if len(current_word)%2==0 and len(current_word)>3:
+
+            two_letter_counter = 1
+            for l in range (2, len(current_word), 2):
+                if current_word[0:2] == current_word[l:(l+2)]:
+                    two_letter_counter += 1
+            if two_letter_counter >= len(current_word)/2:
+                solution += j
+                #print (j)
+                continue
+
+            
             
             #123123
+            #die hälfte
             if current_word[0:int(current_len/2)] == current_word[int(current_len/2):]:
+                #print(j)
                 solution += j
                 continue
-        
+            """
             if (current_word[0:1] == current_word[2:3]):
                 if current_word[0:1] == current_word[4:5]:
                     print (current_word)
-                    continue
+                    continue            
+            """
+
 
              
         
@@ -70,4 +91,3 @@ for i in ranges:
 print (solution)
 
         
-
