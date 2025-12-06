@@ -14,7 +14,7 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 
 ## 🎁 Progress Overview (2025)
 
-| Day | Part 1 | Part 2 |
+| Day | Part 1 solved | Part 2 solved |
 |-----|--------|--------|
 | 001 | [x] | [x] |
 | 002 | [x] | [ ] |
