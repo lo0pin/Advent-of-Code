@@ -17,8 +17,8 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 | Day | Part 1 solved | Part 2 solved |
 |-----|--------|--------|
 | 001 | [x] | [x] |
-| 002 | [x] | [ ] |
-| 003 | [ ] | [ ] |
+| 002 | [x] | [x] |
+| 003 | [x] | [ ] |
 | 004 | [ ] | [ ] |
 | 005 | [ ] | [ ] |
 | 006 | [ ] | [ ] |
