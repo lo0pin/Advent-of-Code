@@ -75,8 +75,4 @@ Adding up all the invalid IDs in this example produces 4174379265.
 
 What do you get if you add up all of the invalid IDs using these new rules?
 
-Answer:
 
-Although it hasn't changed, you can still get your puzzle input.
-
-You can also [Shareon Bluesky Twitter Mastodon] this puzzle.
