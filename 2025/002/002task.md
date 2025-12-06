@@ -1,16 +1,5 @@
 
-Advent of Code
-
-    [About][Events][Shop][Settings][Log Out]
-
-lo0pin 3*
- {'year':2025}
-
-    [Calendar][AoC++][Sponsors][Leaderboards][Stats]
-
-Our sponsors help make Advent of Code possible:
-Squarepoint - Squarepoint is a global investment firm that combines rigorous research and cutting-edge technology to develop strategies trading across global markets. Technology is integral to our success, check out our careers page.
---- Day 2: Gift Shop ---
+*--- Day 2: Gift Shop ---*
 
 You get inside and take the elevator to its only other stop: the gift shop. "Thank you for visiting the North Pole!" gleefully exclaims a nearby sign. You aren't sure who is even allowed to visit the North Pole, but you know you can access the lobby through here, and from there you can access the rest of the North Pole base.
 
@@ -51,7 +40,10 @@ What do you get if you add up all of the invalid IDs?
 Your puzzle answer was 22062284697.
 
 The first half of this puzzle is complete! It provides one gold star: *
---- Part Two ---
+
+---
+
+**--- Part Two ---**
 
 The clerk quickly discovers that there are still invalid IDs in the ranges in your list. Maybe the young Elf was doing other silly patterns as well?
 
