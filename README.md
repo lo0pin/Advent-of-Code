@@ -48,6 +48,8 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 ---
 
 ## 🎄 Repository Structure
+
+```
 /2025/
 ├─ 001/
 │ ├─ 001Input.py # Raw puzzle input / preprocessing
@@ -56,13 +58,13 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 │ ├─ 001partTwo.py # My Part 2 solution
 │ ├─ 001partOne_bestSolution.py # Optimized / reference Part 1
 │ ├─ 001partTwo_bestSolution.py # Optimized / reference Part 2
-│ └─ README.md (optional notes)
+│ └─ README.md # optional notes
 │
 ├─ 002/
-│ └─ ...
+│ └─ ... # same structure for each day
 │
-└─ utils/ (optional helpers)
-
+└─ utils/ # optional helpers, shared tools
+```
 
 
 **Naming convention:**  
