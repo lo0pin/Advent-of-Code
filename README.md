@@ -60,6 +60,8 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 │
 ├─ 002/
 │ └─ ...
+│
+└─ utils/ (optional helpers)
 
 
 
