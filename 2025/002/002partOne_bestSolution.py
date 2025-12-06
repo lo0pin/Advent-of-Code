@@ -31,18 +31,17 @@ def is_invalid_id(n: int) -> bool:
     """
     Prüft, ob eine gegebene Zahl `n` eine „ungültige“ ID ist.
 
-    Kriterium:
+    Kriterien:
     - Schreibe `n` als Dezimalstring s = str(n).
-    - Wenn die Länge von s ungerade ist → kann keine Dopplung sein → False.
+    - Wenn die Länge von s ungerade ist → keine Dopplung möglich → False.
     - Teile s in zwei gleich lange Hälften:
-        links = s[:len(s)//2]
-        rechts = s[len(s)//2:]
-      Wenn links == rechts, dann ist s eine Wiederholung derselben Ziffernfolge.
+        left = s[:len(s)//2]
+        right = s[len(s)//2:]
+      Wenn left == right, dann ist s eine exakte Wiederholung.
     """
     s = str(n)
 
-    # Wenn die Anzahl der Ziffern ungerade ist, kann man sie nicht
-    # in zwei gleiche Teile aufspalten → keine verdoppelte Folge.
+    # Ungerade Länge → keine Wiederholung möglich
     if len(s) % 2 == 1:
         return False
 
@@ -50,34 +49,29 @@ def is_invalid_id(n: int) -> bool:
     left = s[:half]
     right = s[half:]
 
-    # Falls beide Hälften identisch sind, ist die ID ungültig
     return left == right
 
 
 def sum_invalid_ids_in_ranges(range_string: str) -> int:
     """
-    Nimmt eine Zeichenkette mit Bereichen im Format
+    Nimmt eine Zeichenkette mit Bereichen im Format:
         "start1-end1,start2-end2,..."
-    und berechnet die Summe aller *ungültigen* IDs in diesen Bereichen.
-
-    Beispiel für einen Bereich:
-        "95-115" bedeutet: alle IDs von 95 bis inklusive 115
+    und berechnet die Summe aller ungültigen IDs innerhalb dieser Bereiche.
     """
-    total_sum = 0  # Hier sammeln wir die Summe aller ungültigen IDs
+    total_sum = 0
 
-    # Die Bereiche sind durch Kommata getrennt
+    # Bereiche am Komma trennen
     for part in range_string.split(','):
-        part = part.strip()  # Sicherheitsmaßnahme: Leerzeichen entfernen
+        part = part.strip()
         if not part:
-            # Leere Stücke (z.B. durch doppelte Kommas) überspringen
             continue
 
-        # Jeden Bereich am Bindestrich trennen: "start-end"
+        # Ein Bereich: "start-end"
         start_str, end_str = part.split('-')
         start_id = int(start_str)
         end_id = int(end_str)
 
-        # Alle IDs im Bereich durchgehen (inklusive end_id, daher +1)
+        # IDs durchlaufen
         for product_id in range(start_id, end_id + 1):
             if is_invalid_id(product_id):
                 total_sum += product_id
@@ -86,20 +80,12 @@ def sum_invalid_ids_in_ranges(range_string: str) -> int:
 
 
 def main():
-    """
-    Hauptfunktion:
-    - Verwendet die gegebene Eingabe
-    - Berechnet die Summe aller ungültigen IDs
-    - Gibt das Ergebnis aus
-    """
+    """Startet die Berechnung und gibt das Ergebnis aus."""
     result = sum_invalid_ids_in_ranges(RANGE_INPUT)
     print("Summe aller ungültigen IDs:", result)
 
 
-# Dieser Block sorgt dafür, dass main() nur ausgeführt wird,
-# wenn das Skript direkt gestartet wird (nicht beim Import).
 if __name__ == "__main__":
     main()
-
-    # Hinweis: Für die gegebene Eingabe lautet die Ausgabe:
-    # Summe aller ungültigen IDs: 22062284697
+    # Hinweis: Ergebnis für die gesamte Eingabe ist:
+    # 22062284697
