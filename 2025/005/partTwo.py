@@ -1,1 +1,24 @@
+from input import *
 
+ids = data.splitlines()
+
+#foods = data2.splitlines()
+fresh_counter = 0
+
+for id in ids:
+    
+    start = int(id.split("-")[0])
+    end = int(id.split("-")[1])
+
+    fresh_counter += (end-start)
+    """
+    ????????
+    ????????
+    ????????
+    ????????
+    """
+
+
+
+
+print (fresh_counter)
