@@ -37,7 +37,7 @@ Solve the problems on the math worksheet. What is the grand total found by addin
 
 ---
 
-# **--- Part Two ---**
+## **--- Part Two ---**
 
 The big cephalopods come back to check on how things are going. When they see that your grand total doesn't match the one expected by the worksheet, they realize they forgot to explain how to read cephalopod math.
 
