@@ -1,4 +1,4 @@
-*--- Day 5: Cafeteria ---*
+## --- Day 5: Cafeteria ---
 
 As the forklifts break through the wall, the Elves are delighted to discover that there was a cafeteria on the other side after all.
 
@@ -42,7 +42,7 @@ So, in this example, 3 of the available ingredient IDs are fresh.
 
 Process the database file from the new inventory management system. How many of the available ingredient IDs are fresh?
 
-*--- Part Two ---*
+## --- Part Two ---
 
 The Elves start bringing their spoiled inventory to the trash chute at the back of the kitchen.
 
