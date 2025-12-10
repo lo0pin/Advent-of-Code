@@ -23,7 +23,7 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 | 005 | [x] | [ ] |
 | 006 | [x] | [ ] |
 | 007 | [x] | [ ] |
-| 008 | [ ] | [ ] |
+| 008 | [x] | [ ] |
 | 009 | [ ] | [ ] |
 | 010 | [ ] | [ ] |
 | 011 | [ ] | [ ] |
