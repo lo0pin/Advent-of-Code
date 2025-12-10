@@ -46,13 +46,19 @@ for j in range(HOW_MANY_VALUES):
 
     short_list.append(idx_shortest_dist)
 
+
+##############################################
 break_condition = False
 merge_counter = 0
 merge_condition = False
 
 for i in short_list:
+
+    """a = distances_container[i][0]
+    b = distances_container[i][1]"""
+
+    break_condition = False
     for j in circuits:
-        break_condition = False
         if distances_container[i][0] in j and distances_container[i][1] in j:
             """print("2 punkte in einem circiut")
             print(distances_container[i][0], " and ", distances_container[i][1], " already in: ", j)"""
@@ -60,9 +66,8 @@ for i in short_list:
             break
     if break_condition:
         #print("break_condition")
-        break_condition = False
         continue
-    break_condition = False
+    ######sollte passen######
 
     idx_ciricuits=[]
     merge_counter = 0
@@ -70,24 +75,32 @@ for i in short_list:
         if distances_container[i][0] in circuits[j] or distances_container[i][1] in circuits[j]:
             merge_counter += 1
             idx_ciricuits.append(j)
+            
     if merge_counter >=2:
         #print("merge_condition")
         merged_circuit = []
         for m in idx_ciricuits:
             for n in range(len(circuits[m])):
                 merged_circuit.append(circuits[m][n])
-            circuits.remove(circuits[m])
-        circuits.append(merged_circuit)
+            
+        circuits.append(merged_circuit.copy())
+        idx_ciricuits.reverse()
+        for idx in idx_ciricuits:
+            del circuits[idx]
         #merged_circuit.clear()
-        merge_counter = 0
+        #merge_counter = 0
         continue
-    
 
-    for j in circuits:
-        if distances_container[i][0] in j:
-            j.append(distances_container[i][1])
-        elif distances_container[i][1] in j:
-            j.append(distances_container[i][0])
+
+
+
+    if merge_counter == 1:
+        if distances_container[i][0] in circuits[idx_ciricuits[0]]:
+            circuits[idx_ciricuits[0]].append(distances_container[i][1])
+        elif distances_container[i][1] in circuits[idx_ciricuits[0]]:
+            circuits[idx_ciricuits[0]].append(distances_container[i][0])
+        continue
+
     if merge_counter == 0:
         new_circuit = [distances_container[i][0], distances_container[i][1]]
         circuits.append(new_circuit)
