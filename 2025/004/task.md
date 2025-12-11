@@ -1,4 +1,4 @@
-*--- Day 4: Printing Department ---*
+# **--- Day 4: Printing Department ---**
 
 You ride the escalator down to the printing department. They're clearly getting ready for Christmas; they have lots of large rolls of paper everywhere, and there's even a massive printer in the corner (to handle the really big print jobs).
 
@@ -11,6 +11,7 @@ If you can optimize the work the forklifts are doing, maybe they would have time
 The rolls of paper (@) are arranged on a large grid; the Elves even have a helpful diagram (your puzzle input) indicating where everything is located.
 
 For example:
+
 ```
 ..@@.@@@@.
 @@@.@.@.@@
@@ -23,9 +24,11 @@ For example:
 .@@@@@@@@.
 @.@.@@@.@.
 ```
+
 The forklifts can only access a roll of paper if there are fewer than four rolls of paper in the eight adjacent positions. If you can figure out which rolls of paper the forklifts can access, they'll spend less time looking and more time breaking down the wall to the cafeteria.
 
 In this example, there are 13 rolls of paper that can be accessed by a forklift (marked with x):
+
 ```
 ..xx.xx@x.
 x@@.@.@.@@
@@ -38,11 +41,12 @@ x.@@@.@@@@
 .@@@@@@@@.
 x.x.@@@.x.
 ```
+
 Consider your complete diagram of the paper roll locations. How many rolls of paper can be accessed by a forklift?
 
----
+```Your puzzle answer was 1437.```
 
-*--- Part Two ---*
+## **--- Part Two ---**
 
 Now, the Elves just need help accessing as much of the paper as they can.
 
@@ -194,3 +198,6 @@ Stop once no more rolls of paper are accessible by a forklift. In this example, 
 
 Start with your original diagram. How many rolls of paper in total can be removed by the Elves and their forklifts?
 
+```Your puzzle answer was 8765.```
+
+Both parts of this puzzle are complete! They provide two gold stars: **
