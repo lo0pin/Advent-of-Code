@@ -40,11 +40,7 @@ Adding up all the invalid IDs in this example produces 1227775554.
 
 What do you get if you add up all of the invalid IDs?
 
-Your puzzle answer was 22062284697.
-
-The first half of this puzzle is complete! It provides one gold star: *
-
----
+```Your puzzle answer was 22062284697.```
 
 ## **--- Part Two ---**
 
@@ -54,6 +50,7 @@ Now, an ID is invalid if it is made only of some sequence of digits repeated at 
 
 From the same example as before:
 
+```
     11-22 still has two invalid IDs, 11 and 22.
     95-115 now has two invalid IDs, 99 and 111.
     998-1012 now has two invalid IDs, 999 and 1010.
@@ -65,9 +62,12 @@ From the same example as before:
     565653-565659 now has one invalid ID, 565656.
     824824821-824824827 now has one invalid ID, 824824824.
     2121212118-2121212124 now has one invalid ID, 2121212121.
+```
 
 Adding up all the invalid IDs in this example produces 4174379265.
 
 What do you get if you add up all of the invalid IDs using these new rules?
 
+```Your puzzle answer was 46666175279.```
 
+Both parts of this puzzle are complete! They provide two gold stars: **
