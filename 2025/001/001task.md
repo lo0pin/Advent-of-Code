@@ -1,4 +1,4 @@
---- Day 1: Secret Entrance ---
+# **--- Day 1: Secret Entrance ---**
 
 The Elves have good news and bad news.
 
@@ -30,6 +30,7 @@ You could follow the instructions, but your recent required official North Pole 
 
 For example, suppose the attached document contained the following rotations:
 
+```
 L68
 L30
 R48
@@ -40,9 +41,11 @@ L1
 L99
 R14
 L82
+```
 
 Following these rotations would cause the dial to move as follows:
 
+```
     The dial starts by pointing at 50.
     The dial is rotated L68 to point at 82.
     The dial is rotated L30 to point at 52.
@@ -54,13 +57,15 @@ Following these rotations would cause the dial to move as follows:
     The dial is rotated L99 to point at 0.
     The dial is rotated R14 to point at 14.
     The dial is rotated L82 to point at 32.
+```
 
 Because the dial points at 0 a total of three times during this process, the password in this example is 3.
 
 Analyze the rotations in your attached document. What's the actual password to open the door?
 
-Your puzzle answer was 1084.
---- Part Two ---
+```Your puzzle answer was 1084.```
+
+## **--- Part Two ---**
 
 You're sure that's the right password, but the door won't open. You knock, but nobody answers. You build a snowman while you think.
 
@@ -72,6 +77,7 @@ You remember from the training seminar that "method 0x434C49434B" means you're a
 
 Following the same rotations as in the above example, the dial points at zero a few extra times during its rotations:
 
+```
     The dial starts by pointing at 50.
     The dial is rotated L68 to point at 82; during this rotation, it points at 0 once.
     The dial is rotated L30 to point at 52.
@@ -83,6 +89,7 @@ Following the same rotations as in the above example, the dial points at zero a 
     The dial is rotated L99 to point at 0.
     The dial is rotated R14 to point at 14.
     The dial is rotated L82 to point at 32; during this rotation, it points at 0 once.
+```
 
 In this example, the dial points at 0 three times at the end of a rotation, plus three more times during a rotation. So, in this example, the new password would be 6.
 
@@ -90,10 +97,6 @@ Be careful: if the dial were pointing at 50, a single rotation like R1000 would 
 
 Using password method 0x434C49434B, what is the password to open the door?
 
-Your puzzle answer was 6475.
+```Your puzzle answer was 6475.```
 
-Both parts of this puzzle are complete! They provide two gold stars: **
-
-At this point, you should return to your Advent calendar and try another puzzle.
-
-If you still want to see it, you can get your puzzle input.
+## Both parts of this puzzle are complete! They provide two gold stars: ** 
