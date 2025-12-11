@@ -1,4 +1,4 @@
-## --- Day 5: Cafeteria ---
+# **--- Day 5: Cafeteria ---**
 
 As the forklifts break through the wall, the Elves are delighted to discover that there was a cafeteria on the other side after all.
 
@@ -9,13 +9,13 @@ You can hear a commotion coming from the kitchen. "At this rate, we won't have a
 The Elves in the kitchen explain the situation: because of their complicated new inventory management system, they can't figure out which of their ingredients are fresh and which are spoiled. When you ask how it works, they give you a copy of their database (your puzzle input).
 
 The database operates on ingredient IDs. It consists of a list of fresh ingredient ID ranges, a blank line, and a list of available ingredient IDs. For example:
+
 ```
 3-5
 10-14
 16-20
 12-18
 ```
-
 ```
 1
 5
@@ -42,7 +42,9 @@ So, in this example, 3 of the available ingredient IDs are fresh.
 
 Process the database file from the new inventory management system. How many of the available ingredient IDs are fresh?
 
-## --- Part Two ---
+```Your puzzle answer was 848.```
+
+## **--- Part Two ---**
 
 The Elves start bringing their spoiled inventory to the trash chute at the back of the kitchen.
 
@@ -61,4 +63,6 @@ The ingredient IDs that these ranges consider to be fresh are ```3, 4, 5, 10, 11
 
 Process the database file again. How many ingredient IDs are considered to be fresh according to the fresh ingredient ID ranges?
 
+```Your puzzle answer was 334714395325710.```
 
+Both parts of this puzzle are complete! They provide two gold stars: **
