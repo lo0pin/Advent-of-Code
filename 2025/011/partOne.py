@@ -4,13 +4,58 @@ NOT SOLVED
 
 from input import *
 
-#liste erstellen
-#liste aus listen von strings; 0. elment = devicename, alle anderen = output
 devices = data.splitlines()
-device_list = []
+device_outputs = [] #liste alle outputs
+device_indices = [] #liste aller devices, um  mit indices zu arbeiten
+complete_list  = []
 for i in devices:
-    device_list.append(i.split(" "))
-    device_list[-1][0] = device_list[-1][0][:3]
+    device_outputs.append(i[5:].split(" "))
+    device_indices.append(i.split(" ")[0][:3])
+
+    complete_list.append(i.split(" "))
+    complete_list[-1][0] = complete_list[-1][0][:3]
+#print(complete_list[:10])
+
+def get_index_from_string(kennung):
+    if kennung in device_indices:
+        return device_indices.index(kennung)
+    return None
+#print(get_index_from_string("rus"))
+
+def get_outputs_from_string(kennung):
+    if kennung in device_indices:
+        return device_outputs[get_index_from_string(kennung)]  
+#print(get_outputs_from_string("rus"))
+
+
+
+def find_ahne(suchbegriff):
+    lead_to_suchbegriff = []
+    for i in range(len(device_outputs)):
+        if suchbegriff in device_outputs[i]:
+            #print(complete_list[i])
+            lead_to_suchbegriff.append(device_indices[i])
+    return lead_to_suchbegriff
+
+print(find_ahne("vii"))
+
+
+start = "out"
+for counter in range(100):
+    for i in find_ahne(start):
+        print(i)
+    start=i
+    print()
+
+
+
+
+
+
+
+"""print (device_outputs[:10])
+print (device_indices[:10])"""
+
 
 #print(device_list[:10])
 ############
@@ -19,51 +64,12 @@ for i in devices:
 #funktion zum abrufen des index für einen string
 #@param: string
 #@return: index
-list_of_indices = []
+"""list_of_indices = []
 for i in device_list:
     list_of_indices.append(i[0])
 
-def getindex(kennung):
-    if kennung in list_of_indices:
-        return list_of_indices.index(kennung)
-    return None
+"""
 ############
-
-def check_path(inp):
-    for i in range(len(device_list)):
-
-        if xy[-1] == "out":
-            return True
-
-    return False
-
-############
-
-"""
-Vorgangsweise:
-1) alle OUT indentifizieren
-2) wege vom OUT zurückverfolgen
-"""
-
-"""for device in range(1, len(device_list[getindex("you")])):
-    while
-"""
-
-
-"""list_of_exits = []
-for i in device_list:
-    if i[-1] == "out":
-        list_of_exits.append(i[0])
-        
-list_of_exits.sort()
-print(list_of_exits)"""
-
-def take_step(current_index):
-
-
-
-
-
 
 
 
