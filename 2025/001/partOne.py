@@ -1,4 +1,4 @@
-from "001input.py" import *
+from "input.py" import *
 
 codes = [line.strip() for line in input.splitlines() if line.strip()]
 
