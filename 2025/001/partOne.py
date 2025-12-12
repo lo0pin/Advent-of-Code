@@ -1,6 +1,6 @@
 from "input.py" import *
 
-codes = [line.strip() for line in input.splitlines() if line.strip()]
+codes = [line.strip() for line in data.splitlines() if data.strip()]
 
 # Startposition des Zahlendrehrads (laut Aufgabe beginnt es bei 50)
 start = 50
