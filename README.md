@@ -14,6 +14,9 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 
 ## 🎁 Progress Overview (2025)
 
+<details>
+  <summary>AoC 2025 Progress</summary>
+
 | Day | Part 1 solved | Part 2 solved |
 |-----|--------|--------|
 | 001 | [x] | [x] |
@@ -42,6 +45,11 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 | 024 | [ ] | [ ] |
 | 025 | [ ] | — |
 
+</details>
+
+
+<details>
+  <summary>AoC 2025 optimized code Progress</summary>
 
 | Day | Part 1 optimized | Part 2 optimized |
 |-----|--------|--------|
@@ -71,7 +79,7 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 | 024 | [ ] | [ ] |
 | 025 | [ ] | — |
 
-
+</details>
 
 (*Day 25 traditionally has only one puzzle.*)
 
