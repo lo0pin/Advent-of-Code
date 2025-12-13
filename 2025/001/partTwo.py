@@ -1,4 +1,4 @@
-from input import *
+from input import data
 
 instructions = data.strip().splitlines()
 
