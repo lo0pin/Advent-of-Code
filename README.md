@@ -41,7 +41,7 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 | Day | Part 1 optimized | Part 2 optimized |
 |-----|--------|--------|
 | 001 | [x] | [x] |
-| 002 | [ ] | [ ] |
+| 002 | [x] | [x] |
 | 003 | [ ] | [ ] |
 | 004 | [ ] | [ ] |
 | 005 | [ ] | [ ] |
