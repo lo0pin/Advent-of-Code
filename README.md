@@ -29,7 +29,7 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 | 008 | [x] | [ ] |
 | 009 | [x] | [ ] |
 | 010 | [x] | [ ] |
-| 011 | [ ] | [ ] |
+| 011 | [x] | [ ] |
 | 012 | [ ] | [ ] |
 
 </details>
@@ -50,7 +50,7 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 | 008 | [ ] | [ ] |
 | 009 | [ ] | [ ] |
 | 010 | [ ] | [ ] |
-| 011 | [ ] | [ ] |
+| 011 | [x] | [ ] |
 | 012 | [ ] | [ ] |
 
 
