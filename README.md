@@ -78,7 +78,6 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 
 </details>
 
-(*Day 25 traditionally has only one puzzle.*)
 
 ---
 
