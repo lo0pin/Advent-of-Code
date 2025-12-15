@@ -86,13 +86,13 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 ```
 /2025/
 ├─ 001/
-│ ├─ 001Input.py # Raw puzzle input / preprocessing
-│ ├─ 001task.md # Puzzle description
-│ ├─ 001partOne.py # My Part 1 solution
-│ ├─ 001partTwo.py # My Part 2 solution
-│ ├─ 001partOne_bestSolution.py # Optimized / reference Part 1
-│ ├─ 001partTwo_bestSolution.py # Optimized / reference Part 2
-│ └─ README.md # optional notes
+│ ├─ Input.py                 # Raw puzzle input 
+│ ├─ task.md                  # Puzzle description
+│ ├─ partOne.py               # My Part 1 solution
+│ ├─ partTwo.py               # My Part 2 solution
+│ ├─ partOne_bestSolution.py  # Smart Solution for Part 1
+│ └─ partTwo_bestSolution.py  # Smart Solution for Part 2
+│  
 │
 ├─ 002/
 │ └─ ... # same structure for each day
