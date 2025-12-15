@@ -102,7 +102,7 @@ Each task tests logic, creativity, and problem-solving — wrapped in a delightf
 
 
 **Naming convention:**  
-`0xx` = day number (001–025).  
+`0xx` = day number (001–012).  
 Each folder is fully self-contained and reproducible.
 
 ---
