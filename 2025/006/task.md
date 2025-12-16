@@ -34,6 +34,7 @@ Of course, the actual worksheet is much wider. You'll need to make sure to unrol
 
 Solve the problems on the math worksheet. What is the grand total found by adding together all of the answers to the individual problems?
 
+```Your puzzle answer was 8108520669952.```
 
 ---
 
@@ -64,3 +65,5 @@ Reading the problems right-to-left one column at a time, the problems are now qu
 Now, the grand total is 1058 + 3253600 + 625 + 8544 = 3263827.
 
 Solve the problems on the math worksheet again. What is the grand total found by adding together all of the answers to the individual problems?
+
+```Your puzzle answer was 11708563470209.```
