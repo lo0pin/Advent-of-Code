@@ -1,11 +1,19 @@
-"""
-work in progress
-"""
-from input import *
+from input import data
+from math import prod
+
+correct_answer = 11708563470209
+
+def debug(**kwargs):
+    for k,v in kwargs.items():
+        print(f"{k} = {v}\t")
+    print()
 
 lines = data.splitlines()
+math_operations = [d for d in lines[-1] if not d.isspace()]
 
-def get_index():
+#debug(math_operations=math_operations)
+
+def get_indices():
     indices = []
     for i in range(len(lines[0])):
         num_count = 0
@@ -18,34 +26,40 @@ def get_index():
             indices.append(".")
     return indices
     
-print(get_index())
+indices_counter = get_indices()
 
-######################################
+#debug(indices_counter=indices_counter)
 
-myarray = []
-newarray = []
-final_result = 0
+result = 0
+math_index = 0
 
-for line in lines:
-    current_line = line.split(" ")
-    myarray.append(current_line)
+numbers = []
+for i in range(len(lines[0])):
+    
+    if indices_counter[i] == ".":
+        if numbers:
+            if math_operations[math_index]=="+":
+                zwischenergebnis = sum(numbers)
+            else:
+                zwischenergebnis = prod(numbers)
+            result += zwischenergebnis
+            math_index += 1
+        numbers = []
+        continue
+    else:
+        number = ""
 
+        for j in range(0,len(lines)-1):
+            if lines[j][i].isnumeric():
+                number+=lines[j][i]
+        if number:
+            numbers.append(int(number))
 
-for i in myarray:
-    for j in i:
-        if j != '':
-            newarray.append(j)
+if numbers:
+    if math_operations[math_index] == "+":
+        result += sum(numbers)
+    else:
+        result += prod(numbers)
 
-for  i in range(int(len(newarray)/5)):
-    if (newarray[i+(int(len(newarray)/5))*4]) == "+":
-        result =int(newarray[i+(int(len(newarray)/5))*0])+int(newarray[i+(int(len(newarray)/5))*1])+int(newarray[i+(int(len(newarray)/5))*2])+int(newarray[i+(int(len(newarray)/5))*3])
-        final_result += result
-        print("yolk")
-    elif (newarray[i+(int(len(newarray)/5))*4]) == "*":
-        print("molk")
-        result =int(newarray[i+(int(len(newarray)/5))*0])*int(newarray[i+(int(len(newarray)/5))*1])*int(newarray[i+(int(len(newarray)/5))*2])*int(newarray[i+(int(len(newarray)/5))*3])
-        final_result += result
-        #print(newarray[i+(int(len(newarray)/5))*4])
-
-
-print (final_result)
+print(result)
+print(result==correct_answer)
