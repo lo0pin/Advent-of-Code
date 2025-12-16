@@ -1,10 +1,27 @@
 """
-not solved
+work in progress
 """
-
 from input import *
 
 lines = data.splitlines()
+
+def get_index():
+    indices = []
+    for i in range(len(lines[0])):
+        num_count = 0
+        for j in range(len(lines)-1):
+            if lines[j][i].isnumeric():
+                num_count += 1
+        if num_count > 0:
+            indices.append("#")
+        else:
+            indices.append(".")
+    return indices
+    
+print(get_index())
+
+######################################
+
 myarray = []
 newarray = []
 final_result = 0
