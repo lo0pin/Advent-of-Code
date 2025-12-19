@@ -20,8 +20,6 @@ for i in range(len(lines)):
         distance = math.sqrt(pow(vector[0],2)+pow(vector[1],2)+pow(vector[2],2))
         distances_container.append([".".join(first_point),".".join(secon_point),distance])
 
-
-
 short_list = []
 current_shortest = 0
 
