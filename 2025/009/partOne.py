@@ -1,4 +1,4 @@
-from input import *
+from input import data
 
 coords = data.splitlines()
 
