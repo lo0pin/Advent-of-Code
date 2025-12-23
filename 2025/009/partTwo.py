@@ -1,19 +1,23 @@
 """
-  ____             _          ______                    ____   _____                        _                _               _ 
- |  _ \           | |        |  ____|                  |  _ \ / ____|                      | |              | |             | |
- | |_) |_ __ _   _| |_ ___   | |__ ___  _ __ ___ ___   | |_) | (___    ______   _ __   ___ | |_    ___  ___ | |_   _____  __| |
- |  _ <| '__| | | | __/ _ \  |  __/ _ \| '__/ __/ _ \  |  _ < \___ \  |______| | '_ \ / _ \| __|  / __|/ _ \| \ \ / / _ \/ _` |
- | |_) | |  | |_| | ||  __/  | | | (_) | | | (_|  __/  | |_) |____) |          | | | | (_) | |_   \__ \ (_) | |\ V /  __/ (_| |
- |____/|_|   \__,_|\__\___|  |_|  \___/|_|  \___\___|  |____/|_____/           |_| |_|\___/ \__|  |___/\___/|_| \_/ \___|\__,_|
+  ____             _          ______                    ____   _____ 
+ |  _ \           | |        |  ____|                  |  _ \ / ____|
+ | |_) |_ __ _   _| |_ ___   | |__ ___  _ __ ___ ___   | |_) | (___  
+ |  _ <| '__| | | | __/ _ \  |  __/ _ \| '__/ __/ _ \  |  _ < \___ \ 
+ | |_) | |  | |_| | ||  __/  | | | (_) | | | (_|  __/  | |_) |____) |
+ |____/|_|   \__,_|\__\___|  |_|  \___/|_|  \___\___|  |____/|_____/ 
  """
 
 from input import data
+import time
+
+tst = time.perf_counter()
 
 coords = data.splitlines()
 
 area = 0
 
 correct_answer = 1525241870
+#correct_answer = 1513988754
 
 coord_points = []
 
@@ -41,7 +45,7 @@ def check_if_xyPoint_in_area(x, y):
                 if coord_points[i][0] <= x and not conditions_met[0]:
                     conditions_met[0] = 1
                     
-                elif coord_points[i][0] >= x and not conditions_met[1]:
+                if coord_points[i][0] >= x and not conditions_met[1]:
                     conditions_met[1] = 1
 
 
@@ -60,7 +64,7 @@ def check_if_xyPoint_in_area(x, y):
                 if coord_points[i][1] <= y and not conditions_met[2]:
                     conditions_met[2] = 1
 
-                elif coord_points[i][1] >= y and not conditions_met[3]:
+                if coord_points[i][1] >= y and not conditions_met[3]:
                     conditions_met[3] = 1 
 
         else:
@@ -82,16 +86,16 @@ def return_all_four_points_of_rectangle(coord_a, coord_b):
 
 def check_if_all_lines_of_rectangle_in_area(coord_a, coord_b):
     points = return_all_four_points_of_rectangle(coord_a, coord_b)
+    range_steps = 10
 
 
-
-    for i in range(min(points[0][1], points[1][1]),max(points[0][1], points[1][1])):
+    for i in range(min(points[0][1], points[1][1]),max(points[0][1], points[1][1]),range_steps):
         if not check_if_xyPoint_in_area(points[0][0], i):
             return False
         if not check_if_xyPoint_in_area(points[2][0], i):
             return False
         
-    for i in range(min(points[1][0], points[2][0]), max(points[1][0], points[2][0])):
+    for i in range(min(points[1][0], points[2][0]), max(points[1][0], points[2][0]),range_steps):
         if not check_if_xyPoint_in_area(i, points[1][1]):
             return False
         if not check_if_xyPoint_in_area(i, points[3][1]):
@@ -104,17 +108,13 @@ for coord in coords:
     end = int(coord.split(",")[1])
     coord_points.append([start, end])
 
-#coord_points.sort(key=lambda pair: pair[0])
-#print(coord_points[:10])
-
 
 for first_coord in range(len(coord_points)):
     for second_cord in range(first_coord+1,len(coord_points)):
         if coord_points[first_coord][0] == coord_points[second_cord][0] or coord_points[first_coord][1] == coord_points[second_cord][1]:
-            #print("skippidi")
             continue
 
-        current_area = abs(coord_points[second_cord][0]-coord_points[first_coord][0]+1) * abs(coord_points[second_cord][1]-coord_points[first_coord][1]+1)
+        current_area = (abs(coord_points[second_cord][0]-coord_points[first_coord][0])+1) * (abs(coord_points[second_cord][1]-coord_points[first_coord][1])+1)
         
         areas.append((coord_points[first_coord], coord_points[second_cord], current_area))
         
@@ -123,29 +123,41 @@ for first_coord in range(len(coord_points)):
 
 areas.sort(reverse=True, key=lambda a : a[2])
 
-#print(areas[:5])
-#print(area)
+times=[]
 
-#print(in_area(1733, 47000))
-
-
-
-#print(len(areas))
-start=1
-for i in areas:
-    print(start)
-    start += 1
+#[49500:]
+for i in areas[45000:]:
+    progress = start/len(areas)*100
+    print(f"\r{' ' * 40}", end="")         # alte Zeile wegwischen
+    print(f"\r{progress:.6f} %", end="", flush=True)
+    
+    t0 = time.perf_counter()
     if check_if_all_four_corners_in_area(i[0], i[1]):
-        
-        
         if check_if_all_lines_of_rectangle_in_area(i[0], i[1]):
-            print(i[2])
+            print(f"\n{i[2]}")
             break
+        t1 = time.perf_counter()
+        if len(times)<2:
+            times.append(t1-t0)
+        else:
+            current = t1-t0
+            times[0]=min(current, times[0])
+            times[1]=max(current, times[1])
 
-"""for i in range(len(areas)):
-    #print(areas[i][2])
-    if 1525240870 < areas[i][2] < 1525242870:
-        print(i)"""
+ 
+
+tend = time.perf_counter()
+
+print(f"gesamte Laufzeit: {tend - tst:.6f} s")
+if times:
+    print(f"min Laufzeit p itera: {times[0]:.6f} s")
+if len(times)>1:
+    print(f"max Laufzeit p itera: {times[1]:.6f} s")
+
+
+
+
+
 
 
 
