@@ -38,9 +38,9 @@ odds = [n for n in nums if n % 2 == 1]
 ### Beispiel B: Wörter nach Länge filtern
 words = ["boot", "stern", "sailing", "ki", "python"]
 long = [w for w in words if len(w) >= 5]
-# -> ["stern", "sailing", "python"]
+-> ["stern", "sailing", "python"]
 
 ### Beispiel C: Zeilen aus Datei / Text filtern
 lines = ["# comment", "data1", "", "data2", "   ", "data3"]
 clean = [ln for ln in lines if ln.strip() and not ln.lstrip().startswith("#")]
-# -> ["data1", "data2", "data3"]
+-> ["data1", "data2", "data3"]
