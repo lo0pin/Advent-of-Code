@@ -9,6 +9,6 @@ def debug(**kwargs):
     print()
 
 #einheitliches Format für  einen String
-###############CHAPTER 1################
+############## CHAPTER 1 ###############
 def ausgabe(inp):
-    print(inp.upper().center(40, "#"))
+    print(inp.upper().center(len(inp)+2," ").center(40, "#"))
