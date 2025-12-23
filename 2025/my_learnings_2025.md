@@ -25,8 +25,8 @@ with open("output.txt", "a", encoding="utf-8") as f: #"a" = append
 ## **list comprehension**
 nums = [1, 2, 3]
 doubles = [n * 2 for n in nums]
-# -> [2, 4, 6]
+-> [2, 4, 6]
 
 names = ["julian", "alma", "matilda"]
 caps = [name.capitalize() for name in names]
-# -> ["Julian", "Alma", "Matilda"]
+-> ["Julian", "Alma", "Matilda"]
