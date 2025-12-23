@@ -44,3 +44,17 @@ long = [w for w in words if len(w) >= 5]
 lines = ["# comment", "data1", "", "data2", "   ", "data3"]
 clean = [ln for ln in lines if ln.strip() and not ln.lstrip().startswith("#")]
 -> ["data1", "data2", "data3"]
+
+### 3) if ... else in Comprehensions (anderer Platz!)
+[ AUSDRUCK_IF_TRUE if BEDINGUNG else AUSDRUCK_IF_FALSE for ELEMENT in ITERABLE ]
+Beim Filter-if steht if am Ende (nach dem for)
+
+Beim if/else-Ausdruck steht if/else vor dem for
+
+nums = [1, 2, 3, 4, 5]
+mapped = [n if n % 2 == 1 else 0 for n in nums]
+# -> [1, 0, 3, 0, 5]
+
+words = ["a", "ab", "abc", "abcd"]
+labels = ["kurz" if len(w) < 3 else "lang" for w in words]
+# -> ["kurz", "kurz", "lang", "lang"]
