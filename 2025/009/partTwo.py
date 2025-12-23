@@ -5,7 +5,7 @@
  |  _ <| '__| | | | __/ _ \  |  __/ _ \| '__/ __/ _ \  |  _ < \___ \ 
  | |_) | |  | |_| | ||  __/  | | | (_) | | | (_|  __/  | |_) |____) |
  |____/|_|   \__,_|\__\___|  |_|  \___/|_|  \___\___|  |____/|_____/ 
- but solved...
+ ...but solved...
  """
 
 from input import data
@@ -280,14 +280,3 @@ if times:
     print(f"min Laufzeit p itera: {times[0]:.6f} s")
 if len(times)>1:
     print(f"max Laufzeit p itera: {times[1]:.6f} s")
-
-
-
-
-
-
-
-
-
-
-
