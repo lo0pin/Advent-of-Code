@@ -53,8 +53,7 @@ Beim if/else-Ausdruck steht if/else vor dem for
 
 nums = [1, 2, 3, 4, 5]
 mapped = [n if n % 2 == 1 else 0 for n in nums]
-# -> [1, 0, 3, 0, 5]
+-> [1, 0, 3, 0, 5]
 
 words = ["a", "ab", "abc", "abcd"]
-labels = ["kurz" if len(w) < 3 else "lang" for w in words]
-# -> ["kurz", "kurz", "lang", "lang"]
+-> ["kurz", "kurz", "lang", "lang"]
