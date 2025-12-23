@@ -27,6 +27,20 @@ nums = [1, 2, 3]
 doubles = [n * 2 for n in nums]
 -> [2, 4, 6]
 
+### Beispiel C: Strings bearbeiten
 names = ["julian", "alma", "matilda"]
 caps = [name.capitalize() for name in names]
 -> ["Julian", "Alma", "Matilda"]
+
+### Beispiel A: ungerade Zahlen
+odds = [n for n in nums if n % 2 == 1]
+
+### Beispiel B: Wörter nach Länge filtern
+words = ["boot", "stern", "sailing", "ki", "python"]
+long = [w for w in words if len(w) >= 5]
+# -> ["stern", "sailing", "python"]
+
+### Beispiel C: Zeilen aus Datei / Text filtern
+lines = ["# comment", "data1", "", "data2", "   ", "data3"]
+clean = [ln for ln in lines if ln.strip() and not ln.lstrip().startswith("#")]
+# -> ["data1", "data2", "data3"]
