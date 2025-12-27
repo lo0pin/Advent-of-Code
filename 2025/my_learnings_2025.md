@@ -58,3 +58,7 @@ mapped = [n if n % 2 == 1 else 0 for n in nums]
 
 words = ["a", "ab", "abc", "abcd"]
 -> ["kurz", "kurz", "lang", "lang"]
+
+
+print(f"\r{' ' * 40}", end="")         # alte Zeile wegwischen
+print(f"\r{progress:.6f} %", end="", flush=True)
