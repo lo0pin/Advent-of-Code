@@ -1,4 +1,4 @@
-````md
+
 # Python-Konzepte – logisch sortiert mit Kurzbeschreibung & Beispiel
 
 Diese Sammlung ordnet typische Python-“Bausteine” so, wie sie in echten Programmen oft gemeinsam auftreten:  
@@ -14,7 +14,7 @@ Wenn du einen großen Textblock (z. B. Dateiinhalt oder Input-String) hast, zerl
 **Snippet**
 ```python
 lines = data.splitlines()
-````
+```
 
 **Beispiel**
 
@@ -439,9 +439,4 @@ t1 = time.perf_counter()
 print(f"Laufzeit: {t1 - t0:.6f} s")
 ```
 
----
 
-```
-
-Wenn du willst, kann ich dir daraus auch eine hübsche Repo-Struktur machen (z. B. `snippets/README.md` + einzelne `*.py`-Beispieldateien), aber das hier ist bereits “copy & paste” GitHub-ready.
-```
